@@ -86,7 +86,7 @@ a{
 .nav__bar{  
     display: flex;
     flex-direction: row;
-    align-items:center;
+    align-items:start;
     color: #2A3848;
     text-decoration: none;  
 }
@@ -843,17 +843,9 @@ a{
 
 @media screen and (max-width:430px){
 
-    /* .wrapper{
-        padding: 20px;
-        padding-right: 36x;
-        margin: 0;
-    } */
-
     .wrapper{
-        /* max-width: 200px; */
         margin: 0 0;
         padding: 20px 20px;
-        /* padding: 0px 0px; */
     }
 
     .header__wrapper{
@@ -863,15 +855,74 @@ a{
 
     .nav__bar-buttons{    
         display: flex;
-        justify-content: space-between;
+        flex-direction: column;
+        position: fixed;
+        justify-content: start;
+        align-items:start;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        color: white;
+        background-color: black;
+        z-index: 10;
+        transform: translateX(100%);
+        transition: .2s linear all;
+    }
+
+    .nav__bar-active{
+        transform: translateX(0);
+    }
+
+    .nav__bar-button{
+        color: #ffffff;
+        padding-bottom: 10px
+    }
+
+    .nav__bar-button:hover{
+        width:fit-content;
+        border-radius: none;
+        background: none;
+        cursor: pointer;    
+    }
+
+    .button__with-logo:hover{
+        background: none
     }
 
     .header__burger{
         display: block;  
         margin-right: 18px; 
     }
-    .bar-button{
+    /* .bar-button{
         display: none;
+    } */
+
+    .header_nav-close{
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        z-index: 11;
+    }
+
+    .header_close-line{
+        width: 100%;
+        display: block;
+        height: 2px;
+        background-color: #ffffff;
+        position: absolute;
+        top: 50%;
+    }
+
+    
+    .header_close-line:first-child{
+        transform: translateY(-50%) rotate(45deg);
+    }
+
+    .header_close-line:last-child{
+        transform: translateY(-50%) rotate(-45deg);
     }
 
     .logo__iphone {
@@ -1225,8 +1276,6 @@ a{
         margin: 0 auto;
     }
 
-
-
     .footer__menu-section:nth-child(1){
         display: none;  
     }
@@ -1250,10 +1299,6 @@ a{
     }
 
     .footer__menu-title{
-
-
-
-
         margin: 0;
         padding-right: 0px;
         padding-bottom: 10px;
