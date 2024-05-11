@@ -86,7 +86,7 @@ a{
 .nav__bar{  
     display: flex;
     flex-direction: row;
-    align-items:start;
+    align-items: center;
     color: #2A3848;
     text-decoration: none;  
 }
@@ -222,7 +222,7 @@ a{
 
 .article__area{
     padding-top: 50px;
-    padding-right: 1350px;
+    padding-right: 780px;
 }
 
 .article__text{
